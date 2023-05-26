@@ -13,7 +13,7 @@ Well, This repo till date (26 May 2023) just has the
 <h3>Okay so, here's the breakdown of the above uploaded files: </h3>
 1.1 The dataset used in "Exploratory_Data_Analysis.zip" is 'Telco Customer Churn' from kaggle https://www.kaggle.com/blastchar/telco-customer-churn & a Bike Sharing dataset also from kaggle.
 
-2.1 The dataset used in "DATA_MINING_assignment.zip" is from here: https://data.police.uk/data/ (You can actually fine tune it according to your likings)
+2.1 The dataset used in "DATA_MINING_assignment.zip" is from here: https://data.police.uk/data/ (You can actually fine tune it according to your likings) but still I've added my semi-cleaned dataset, named "new_merged_crime_data.zip"
 
 You'll love Map-visualization tho, do try that out (only for DATA_MINING_assignment)! (PS: requires longitude & latitude 🤩)
 
