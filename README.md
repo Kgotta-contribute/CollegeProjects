@@ -22,8 +22,8 @@ You'll love Map-visualization tho, do try that out (only for DATA_MINING_assignm
 ![Image1]([image_url](https://raw.githubusercontent.com/username/repository/branch/path/to/image.png
 ))
 ![Image Description](relative/path/to/image.png)
-![DM 1](Kgotta-contribute/CollegeProjects/1.png)
-![DM 1](Kgotta-contribute/CollegeProjects/20.png)
+![DM 1](CollegeProjects/Images/1.png)
+![DM 1](CollegeProjects/Images/20.png)
 ![DM 1](Kgotta-contribute/CollegeProjects/29.png)
 ![DM 1](Kgotta-contribute/CollegeProjects/38.png)
 ![DM 1](Kgotta-contribute/CollegeProjects/39.png)
