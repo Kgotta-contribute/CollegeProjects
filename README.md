@@ -22,26 +22,7 @@ You'll love Map-visualization tho, do try that out (only for DATA_MINING_assignm
 ![Image1]([image_url](https://raw.githubusercontent.com/username/repository/branch/path/to/image.png
 ))
 ![Image Description](relative/path/to/image.png)
-![DM 1](CollegeProjects/Images/1.png)
-![DM 1](CollegeProjects/Images/20.png)
-![DM 1](Kgotta-contribute/CollegeProjects/29.png)
-![DM 1](Kgotta-contribute/CollegeProjects/38.png)
-![DM 1](Kgotta-contribute/CollegeProjects/39.png)
-![DM 1](Kgotta-contribute/CollegeProjects/40.png)
-![DM 1](Kgotta-contribute/CollegeProjects/41.png)
-![DM 1](Kgotta-contribute/CollegeProjects/47.png)
-![DM 1](Kgotta-contribute/CollegeProjects/48.png)
-![DM 1](Kgotta-contribute/CollegeProjects/50.png)
-![DM 1](Kgotta-contribute/CollegeProjects/56.png)
-![DM 1](Kgotta-contribute/CollegeProjects/57.png)
-![DM 1](Kgotta-contribute/CollegeProjects/64.png)
-![DM 1](Kgotta-contribute/CollegeProjects/65.png)
-![DM 1](Kgotta-contribute/CollegeProjects/66.png)
-![DM 1](Kgotta-contribute/CollegeProjects/67.png)
-![DM 1](Kgotta-contribute/CollegeProjects/68.png)
-![DM 1](Kgotta-contribute/CollegeProjects/70.png)
-![DM 1](Kgotta-contribute/CollegeProjects/71.png)
-![DM 1](Kgotta-contribute/CollegeProjects/72.png)
+
 
 
 
