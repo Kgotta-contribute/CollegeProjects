@@ -22,4 +22,7 @@ You'll love Map-visualization tho, do try that out (only for DATA_MINING_assignm
 ![Image1]([image_url](https://raw.githubusercontent.com/username/repository/branch/path/to/image.png
 ))
 
+![Image Description](relative/path/to/image.png)
+
+
 
