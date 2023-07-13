@@ -17,23 +17,23 @@ Well, This repo till date (26 May 2023) just has the
 <br>
 <br>
 <div style="display: flex;">
-<img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/20.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 50px;">
- <img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/29.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 50px;">
+<img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/20.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 150px;">
+ <img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/29.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 150px;">
 </div>
 
 <div style="display: flex;">
- <img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/39.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 50px;">
- <img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/40.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 50px;">
+ <img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/39.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 150px;">
+ <img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/40.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 150px;">
 </div>
 
 <div style="display: flex;">
-<img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/41.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 50px;">
-<img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/48.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 50px;">
+<img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/41.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 150px;">
+<img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/48.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 150px;">
 </div>
 
 <div style="display: flex;">
-<img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/65.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 50px;">
-<img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/72.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 50px;">
+<img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/65.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 150px;">
+<img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/72.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 150px;">
 </div>
 
 <strong>You'll love Map-visualization tho, do try that out (only for DATA_MINING_assignment)! (PS: requires longitude & latitude 🤩)</strong>
@@ -46,33 +46,33 @@ Well, This repo till date (26 May 2023) just has the
 - 1.2 The dataset used in "Exploratory_Data_Analysis.zip" is 'Telco Customer Churn' from kaggle https://www.kaggle.com/blastchar/telco-customer-churn & a Bike Sharing dataset also from kaggle.
 <br><br>
 <div style="display: flex;">
-<img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/S17.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 50px;">
- <img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/S16.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 50px;">
+<img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/S17.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 150px;">
+ <img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/S16.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 150px;">
 </div>
 
 <div style="display: flex;">
- <img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/S15.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 50px;">
- <img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/S14.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 50px;">
+ <img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/S15.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 150px;">
+ <img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/S14.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 150px;">
 </div>
 
 <div style="display: flex;">
-<img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/LA1-3.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 50px;">
-<img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/38.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 50px;">
+<img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/LA1-3.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 150px;">
+<img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/38.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 150px;">
 </div>
 
 <div style="display: flex;">
-<img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/S13.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 50px;">
-<img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/S12.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 50px;">
+<img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/S13.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 150px;">
+<img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/S12.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 150px;">
 </div>
 
 <div style="display: flex;">
-<img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/S11.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 50px;">
+<img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/S11.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 150px;">
 <img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/S2.png?raw=true" alt="Image Description" width="300" height="300">
 </div>
 
   <div style="display: flex;">
-<img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/LA1-4.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 50px;">
-    <img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/37.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 50px;">
+<img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/LA1-4.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 150px;">
+    <img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/37.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 150px;">
 </div>
 
 
