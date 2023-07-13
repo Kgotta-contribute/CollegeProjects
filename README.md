@@ -14,8 +14,8 @@ Well, This repo till date (26 May 2023) just has the
 
 - 1.1 The dataset used in "DATA_MINING_assignment.zip" is from here: https://data.police.uk/data/ (You can actually fine tune it according to your likings) but still I've added my semi-cleaned dataset, named "new_merged_crime_data.zip"
 <div style="display: flex;">
-<img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/20.png?raw=true" alt="Image Description" width="300" height="300">
- <img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/29.png?raw=true" alt="Image Description" width="300" height="300">
+<img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/20.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 10px;">
+ <img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/29.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 10px;">
 </div>
 
 <div style="display: flex;">
