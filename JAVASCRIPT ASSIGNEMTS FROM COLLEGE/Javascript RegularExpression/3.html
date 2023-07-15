@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Email Validation</title>
+    <style>
+      .valid {
+        color: rgb(0, 124, 128);
+      }
+
+      .invalid {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Email Validation</h1>
+    <label for="input">Enter an email address:</label>
+    <input type="text" id="input" name="input">
+    <br><br>
+    <button onclick="validateEmail()">Validate Email</button>
+    <p id="output"></p>
+    <script>
+        function validateEmail() {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const inputEmail = document.getElementById("input").value;
+            if (emailRegex.test(inputEmail)) {
+              document.getElementById("output").innerHTML = "Valid email address";
+              document.getElementById("output").className = "valid";
+            } else {
+              document.getElementById("output").innerHTML = "Invalid email address";
+              document.getElementById("output").className = "invalid";
+            }
+          }
+    </script>
+  </body>
+</html>
+

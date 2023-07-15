@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>String Functions</title>
+    <style>
+        table {
+          border-collapse: collapse;
+          width: 100%;
+          margin-bottom: 1em;
+        }
+        th, td {
+          border: 1px solid black;
+          padding: 0.5em;
+        }
+        th {
+          background-color: #eee;
+        }
+        body {
+          font-family: Arial, sans-serif;
+          text-align: center;
+        }
+        h1 {
+          margin-bottom: 20px;
+          padding: 10px;
+          background-color: #5c67cf;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        label {
+          display: block;
+          margin-bottom: 10px;
+        }
+        /*input[type="number"] {
+          padding: 5px;
+          margin-bottom: 10px;
+        }*/
+        input[type="text"] {
+          padding: 5px;
+          margin-bottom: 10px;
+        }
+        button {
+          padding: 10px;
+          background-color: #5c67cf;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        button:hover {
+          background-color: #3b218a;
+        }
+        p {
+          margin-top: 20px;
+        }
+      </style>
+  </head>
+  <body>
+    <h1>String Functions</h1>
+    <label>Enter a string:</label>
+    <input type="text" id="string" />
+    <br />
+    <button onclick="capitalize()">Capitalize Words</button>
+    <button onclick="insert()">Insert String</button>
+    <button onclick="checkString()">Check String</button>
+    <button onclick="split()">Split String</button>
+    <br />
+    <p id="output"></p>
+    <script>
+        const capitalize = () => {
+            const string = document.getElementById("string").value;
+            const capitalized = string.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
+            document.getElementById("output").innerHTML = `Capitalized: ${capitalized}`;
+          }
+          
+          const insert = () => {
+            const string = document.getElementById("string").value;
+            const index = prompt("Enter the position to insert the string:");
+            const insertString = prompt("Enter the string to insert:");
+            const inserted = string.slice(0, index) + insertString + string.slice(index);
+            document.getElementById("output").innerHTML = `Inserted: ${inserted}`;
+          }
+          
+          const checkString = () => {
+            const string = document.getElementById("string").value;
+            const isString = typeof string === "string";
+            document.getElementById("output").innerHTML = `Is String: ${isString}`;
+          }
+          
+          const split = () => {
+            const string = document.getElementById("string").value;
+            const words = string.split(" ");
+            document.getElementById("output").innerHTML = `Words: ${words.join(", ")}`;
+          }
+    </script>
+  </body>
+</html>
+

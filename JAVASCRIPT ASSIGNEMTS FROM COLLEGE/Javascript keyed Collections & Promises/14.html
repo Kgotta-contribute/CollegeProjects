@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Search Date in String</title>
+  </head>
+  <body>
+    <h1>Search Date in String</h1>
+    <label for="inputString">Enter a string:</label>
+    <input type="text" id="inputString">
+    <button onclick="searchDate()">Search</button>
+    <p id="output"></p>
+    
+    <script>
+      function searchDate() {
+        const inputString = document.getElementById("inputString").value;
+        const regex = /\d{2}\/\d{2}\/\d{4}/; // matches date format DD/MM/YYYY
+        const match = inputString.match(regex);
+        if (match) {
+          document.getElementById("output").innerHTML = match[0];
+        } else {
+          document.getElementById("output").innerHTML = "No date found";
+        }
+      }
+    </script>
+  </body>
+</html>

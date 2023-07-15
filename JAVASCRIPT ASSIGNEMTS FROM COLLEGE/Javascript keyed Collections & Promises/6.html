@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Insert and Remove Elements from Array</title>
+ <style>
+  body {
+   font-family: Arial, sans-serif;
+   padding: 20px;
+  }
+  input {
+   margin-bottom: 10px;
+   padding: 5px;
+   font-size: 16px;
+  }
+  button {
+   background-color: #4CAF50;
+   color: white;
+   padding: 8px 20px;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   font-size: 16px;
+  }
+  button:hover {
+   background-color: #3e8e41;
+  }
+ </style>
+</head>
+<body>
+ <label for="arr">Enter the Array (comma-separated values):</label><br>
+ <input type="text" id="arr" name="arr"><br>
+
+ <label for="index">Enter the Index:</label><br>
+ <input type="number" id="index" name="index"><br>
+
+ <button onclick="removeElement()">Remove Element</button>
+
+ <p id="result"></p>
+
+ <script>
+  function removeElement() {
+   // Get the input values from the page
+   let arrInput = document.getElementById("arr").value;
+   let indexInput = document.getElementById("index").value;
+
+   // Convert the input string to an array
+   let arr = arrInput.split(",");
+
+   // Check if the index is within the array bounds
+   if (indexInput >= 0 && indexInput < arr.length) {
+    // Remove the element at the specified index
+    let removedElement = arr.splice(indexInput, 1);
+
+     // Display the updated array
+    document.getElementById("result").innerHTML = "Array after removing element at index " + indexInput + ": " + arr.join(", ");
+   } else {
+    document.getElementById("result").innerHTML = "Invalid index!";
+   }
+  }
+ </script>
+</body>
+</html>
+
+
+

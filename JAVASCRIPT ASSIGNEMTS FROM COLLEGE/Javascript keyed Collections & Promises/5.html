@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>2D Array Iteration</title>
+ <style>
+  .container {
+   margin: 20px;
+   padding: 10px;
+   border: 1px solid black;
+   max-width: 500px;
+   font-family: Arial, sans-serif;
+   font-size: 16px;
+  }
+  label {
+   display: inline-block;
+   margin-bottom: 5px;
+   font-weight: bold;
+  }
+  input[type="text"] {
+   padding: 5px;
+   margin-bottom: 10px;
+   width: 100%;
+   box-sizing: border-box;
+  }
+  button {
+   background-color: #4cafaf;
+   color: white;
+   padding: 8px 16px;
+   border: none;
+   cursor: pointer;
+   width: 100%;
+   font-size: 16px;
+  }
+  table {
+   border-collapse: collapse;
+   width: 100%;
+  }
+  th, td {
+   border: 1px solid black;
+   text-align: center;
+   padding: 8px;
+   font-family: Arial, sans-serif;
+   font-size: 16px;
+  }
+  th {
+   background-color: #4cafaf;
+   color: white;
+  }
+ </style>
+</head>
+<body>
+ <div class="container">
+  <label>Enter the 2D Array:</label>
+  <input type="text" id="input-array" placeholder="e.g. [[1,2,3],[4,5,6],[7,8,9]]">
+  <button onclick="printArray()">Print Array</button>
+  <table id="output-table"></table>
+ </div>
+ <script>
+    function printArray() {
+        const inputArray = document.getElementById('input-array').value;
+        const outputTable = document.getElementById('output-table');
+        
+        try {
+            const parsedArray = JSON.parse(inputArray);
+            let tableHtml = '<tr><th>Index</th><th>Value</th></tr>';
+            
+            for (let i = 0; i < parsedArray.length; i++) {
+                for (let j = 0; j < parsedArray[i].length; j++) {
+                    tableHtml += `<tr><td>[${i}][${j}]</td><td>${parsedArray[i][j]}</td></tr>`;
+                }
+            }
+            
+            outputTable.innerHTML = tableHtml;
+        } catch (error) {
+            outputTable.innerHTML = 'Invalid input, please enter a valid 2D array';
+        }
+    }  
+ </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Find Largest of Five Numbers</title>
+ <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    h1{
+      /*text-align: center;*/
+      margin-bottom: 50px;
+      margin-top: 50px;
+    }
+    #output {
+      /*text-align: center;*/
+      margin-top: 20px;
+      font-size: 24px;
+    }
+    #inpt
+    {
+        /*text-align: center;*/
+        font-size: 19px;
+        padding: 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        margin-right: 10px;
+    }
+    p{
+        margin-bottom: 10px;
+        margin-top: 30px;
+    }
+    #find_large_btn {
+        font-size: 19px;
+        padding: 8px 16px;
+        background-color: #4c6daf;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+  </style>
+ <script>
+  function findLargest() {
+   // get input values
+   let n1 = Number(document.getElementById("n1").value);
+   let n2 = Number(document.getElementById("n2").value);
+   let n3 = Number(document.getElementById("n3").value);
+   let n4 = Number(document.getElementById("n4").value);
+   let n5 = Number(document.getElementById("n5").value);
+
+   // find largest number
+   let largest = Math.max(n1, n2, n3, n4, n5);
+
+   // display result in alert box
+   alert("The largest number is " + largest);
+  }
+ </script>
+</head>
+<body>
+ <h1>Find Largest of Five Numbers</h1>
+ <p>First enter all numbers & click the submit button:</p>
+ <p>Enter 1st num</p>
+ <input id='inpt' type="number" id="num1">
+ <p>Enter 2nd num</p>
+ <input id='inpt' type="number" id="num2">
+ <p>Enter 3rd num</p>
+ <input id='inpt' type="number" id="num3">
+ <p>Enter 4th num</p>
+ <input id='inpt' type="number" id="num4">
+ <p>Enter 5th num</p>
+ <input id='inpt' type="number" id="num5">
+ <button id='find_large_btn' onclick="findLargest()">Find Largest</button>
+</body>
+</html>

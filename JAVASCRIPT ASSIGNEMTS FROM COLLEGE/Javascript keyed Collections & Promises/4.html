@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Map Example</title>
+ <style>
+  .container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 50px;
+  }
+  input[type="text"] {
+   margin: 10px;
+   padding: 10px;
+   border-radius: 5px;
+   border: none;
+   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  }
+  button {
+   margin: 10px;
+   padding: 10px;
+   border-radius: 5px;
+   border: none;
+   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+   cursor: pointer;
+  }
+  table {
+   border-collapse: collapse;
+   width: 80%;
+   margin-top: 20px;
+  }
+  th, td {
+   padding: 8px;
+   text-align: left;
+   border-bottom: 1px solid #ddd;
+  }
+  th {
+   background-color: #007bff;
+   color: #fff;
+  }
+ </style>
+</head>
+<body>
+ <div class="container">
+  <h2>Map Example</h2>
+  <label for="key">Enter Key:</label>
+  <input type="text" id="key">
+  <label for="value">Enter Value:</label>
+  <input type="text" id="value">
+  <label for="findValue">Enter Key to Find Value:</label>
+  <input type="text" id="findValue">
+  <button onclick="addToMap()">Add to Map</button>
+  <table id="mapTable">
+   <thead>
+    <tr>
+     <th>Key</th>
+     <th>Value</th>
+    </tr>
+   </thead>
+   <tbody>
+   </tbody>
+  </table>
+ </div>
+
+ <script>
+  const map = new Map();
+
+  function addToMap() {
+   const key = document.getElementById('key').value;
+   const value = document.getElementById('value').value;
+   map.set(key, value);
+   document.getElementById('key').value = '';
+   document.getElementById('value').value = '';
+   renderMap();
+  }
+
+  function renderMap() {
+   const mapTable = document.getElementById('mapTable').getElementsByTagName('tbody')[0];
+   mapTable.innerHTML = '';
+   for (const [key, value] of map.entries()) {
+    const row = mapTable.insertRow();
+    const keyCell = row.insertCell(0);
+    const valueCell = row.insertCell(1);
+    keyCell.innerHTML = key;
+    valueCell.innerHTML = value;
+   }
+  }
+
+  function findValue() {
+   const key = document.getElementById('findValue').value;
+   const value = map.get(key);
+   document.getElementById('findValue').value = '';
+   document.getElementById('valueFound').innerHTML = value || "Value not found";
+  }
+ </script>
+ <div class="container">
+  <label for="findValue">Find Value:</label>
+  <input type="text" id="findValue">
+  <button onclick="findValue()">Find</button>
+  <div id="valueFound"></div>
+ </div>
+</body>
+</html>

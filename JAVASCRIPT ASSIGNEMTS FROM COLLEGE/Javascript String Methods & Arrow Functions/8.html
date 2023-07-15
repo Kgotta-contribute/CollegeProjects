@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <title>CaeserCipherEncrypt</title>
+    <style>
+        table {
+          border-collapse: collapse;
+          width: 100%;
+          margin-bottom: 1em;
+        }
+        th, td {
+          border: 1px solid black;
+          padding: 0.5em;
+        }
+        th {
+          background-color: #eee;
+        }
+        body {
+          font-family: Arial, sans-serif;
+          text-align: center;
+        }
+        h1 {
+          margin-bottom: 20px;
+          padding: 10px;
+          background-color: #5c67cf;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        label {
+          display: block;
+          margin-bottom: 10px;
+        }
+        /*input[type="number"] {
+          padding: 5px;
+          margin-bottom: 10px;
+        }*/
+        input[type="text"] {
+          padding: 5px;
+          margin-bottom: 10px;
+        }
+        button {
+          padding: 10px;
+          background-color: #5c67cf;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        button:hover {
+          background-color: #3b218a;
+        }
+        p {
+          margin-top: 20px;
+        }
+      </style>
+    <script>
+        function encryptText()
+        {
+            const inputText = prompt("Enter the text to encrypt: ");
+            const shift = parseInt(prompt("Enter the shift pattern :"));
+
+            let encryptedText = "";
+
+            for(let i=0; i<inputText.length; i++)
+            {
+                let char = inputText[i];
+                if(char.match(/[a-z]/i))
+                {
+                    let code = inputText.charCodeAt(i);
+                    if(char.match(/[a-z]/))
+                    {
+                        code = ((code - 97 + shidt) % 26) + 97;
+                    }
+                    else
+                    {
+                        code = ((code-65+shift) % 26) + 65;
+                    }
+
+                    char = String.fromCharCode(code);
+                }
+                encryptedText += char;
+            }
+            alert(`Encrypted Text: ${encryptedText}`);
+        }
+    </script>
+</head>
+  <body>
+    <h1>Caesar Cipher Encryption</h1>
+    <button onclick="encryptedText()">Encrypt Text</button>
+  </body>
+</html>

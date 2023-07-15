@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array Splitting Program</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input[type="text"] {
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px;
+      background-color: #5c67cf;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #3b218a;
+    }
+    p {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Array Splitting Program</h1>
+
+  <label for="inputArray">Enter comma-separated values for the array:</label>
+  <input type="text" id="inputArray" name="inputArray">
+
+  <label for="chunkSize">Enter the size of the chunks:</label>
+  <input type="text" id="chunkSize" name="chunkSize">
+
+  <button onclick="splitArray()">Split Array</button>
+
+  <p id="result"></p>
+
+  <script>
+    function splitArray() 
+    {
+      var inputArray = document.getElementById("inputArray").value;
+      var chunkSize = document.getElementById("chunkSize").value;
+
+      // Split the input into an array of values
+      var values = inputArray.split(",");
+
+      // Convert the chunk size to a number
+      chunkSize = parseInt(chunkSize);
+
+      // Split the array into chunks of the specified size
+      var chunks = [];
+      for (var i = 0; i < values.length; i += chunkSize) 
+      {
+        chunks.push(values.slice(i, i + chunkSize));
+      }
+
+      // Displaying
+      document.getElementById("result").innerHTML = "Spitting array into chunks of size  " + chunkSize + ":<br>" + chunks.join("<br>");
+    }
+  </script>
+
+</body>
+</html>

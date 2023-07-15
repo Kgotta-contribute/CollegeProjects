@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>useCapture Example</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          text-align: center;
+        }
+        h1 {
+          margin-bottom: 20px;
+        }
+        label {
+          display: block;
+          margin-bottom: 10px;
+        }
+        /*input[type="number"] {
+          padding: 5px;
+          margin-bottom: 10px;
+        }*/
+        input[type="text"] {
+          padding: 5px;
+          margin-bottom: 10px;
+        }
+        button {
+          padding: 10px;
+          background-color: #5c67cf;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        button:hover {
+          background-color: #3b218a;
+        }
+        p {
+          margin-top: 20px;
+        }
+      </style>
+  </head>
+  <body>
+    <h1>useCapture Example</h1>
+    <button id="outer">Outer</button>
+    <button id="inner">Inner</button>
+    <p id="output"></p>
+    <script>
+        const handleClick = (event) => {
+            const button = event.target;
+            const id = button.id;
+            const message = `Clicked ${id} button`;
+            const output = document.getElementById("output");
+            output.innerHTML += `<br />${message}`;
+          }
+          
+          const outer = document.getElementById("outer");
+          outer.addEventListener("click", handleClick, true); // useCapture = true
+          
+          const inner = document.getElementById("inner");
+          inner.addEventListener("click", handleClick, false); // useCapture = false
+          
+    </script>
+  </body>
+</html>
+
+
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Print Numbers Backwards by Skipping 2</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+    
+    label {
+      font-weight: bold;
+      margin-bottom: 10px;
+      margin-top: 50px;
+    }
+    
+    input[type="number"] {
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    
+    button[type="submit"] {
+      background-color: #4c6daf;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin-top: 10px;
+      cursor: pointer;
+      margin-bottom: 100px;
+    }
+    
+    button[type="submit"]:hover {
+      background-color: #294275;
+    }
+  </style>
+</head>
+<body>
+  <h1>Print Numbers Backwards by Skipping 2</h1>
+  
+  <form>
+    <label for="start">Enter starting number:</label>
+    <input type="number" id="start" name="start" required>
+    
+    <button type="submit">Print Numbers</button>
+  </form>
+  
+  <div id="output"></div>
+  
+  <script>
+    const form = document.querySelector('form');
+    const output = document.querySelector('#output');
+    
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+      
+      const start = parseInt(form.start.value);
+      let numbers = '';
+      
+      for (let i = start; i >= 1; i -= 3) {
+        numbers += i + ' ';
+      }
+      
+      output.textContent = 'Numbers: ' + numbers;
+    });
+  </script>
+</body>
+</html>

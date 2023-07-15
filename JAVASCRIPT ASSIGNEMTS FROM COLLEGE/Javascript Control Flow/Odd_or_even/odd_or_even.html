@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Loop Example</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+        }
+        h1 {
+          text-align: center;
+          margin-bottom: 50px;
+          margin-top: 50px;
+        }
+        #output 
+        {
+          text-align: center;
+          margin-top: 20px;
+          font-size: 38px;
+          color: #4c6daf;
+        }
+      </style>
+  </head>
+  <body>
+    <h1>JavaScript program to Display which numbers are even or odd b/w 0 - 15</h1>
+    <br>
+    <div id="output"></div>
+    
+    <script>
+      const name = document.getElementById("name");
+      const age = document.getElementById("age");
+      const output = document.getElementById("output");
+      
+      // Function to display output on webpage
+      function displayOutput(message) {
+        const p = document.createElement("p");
+        p.textContent = message;
+        output.appendChild(p);
+      }
+      
+      //checking even or odd 
+      for (let i = 0; i <= 15; i++) {
+        if (i % 2 === 0) {
+          displayOutput(`${i} is even.`);
+        } else {
+          displayOutput(`${i} is odd.`);
+        }
+      }
+    </script>
+  </body>
+</html>
+

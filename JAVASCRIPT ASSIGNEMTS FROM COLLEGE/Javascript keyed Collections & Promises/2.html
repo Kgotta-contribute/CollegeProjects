@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>JavaScript Promise Examples</title>
+ <style>
+  body {
+   font-family: Arial, sans-serif;
+   background-color: #f5f5f5;
+  }
+  h1 {
+   color: #333;
+   text-align: center;
+   margin-top: 50px;
+  }
+  .container {
+   margin: 50px auto;
+   width: 50%;
+   background-color: #fff;
+   padding: 20px;
+   box-shadow: 0 0 10px rgba(0,0,0,0.2);
+   border-radius: 10px;
+  }
+ </style>
+</head>
+<body>
+ <div class="container">
+  <h1>JavaScript Promise Examples</h1>
+  <hr>
+  
+  <hr>
+  <h2>Program 2: Handling Multiple Callback Functions with Promises</h2>
+  <button onclick="runCallbacks()">Run Callbacks</button>
+  <p id="callbackResult"></p>
+ </div>
+
+ <script>
+ 
+  // Handling Multiple Callback Functions with Promises
+  function callbackOne() {
+   return new Promise((resolve, reject) => {
+    setTimeout(() => {
+     resolve("Callback One Executed");
+    }, 2000);
+   });
+  }
+
+  function callbackTwo() {
+   return new Promise((resolve, reject) => {
+    setTimeout(() => {
+     resolve("Callback Two Executed");
+    }, 1000);
+   });
+  }
+
+  function callbackThree() 
+  {
+   return new Promise((resolve, reject) => {
+    setTimeout(() => {
+     resolve("Callback Three Executed");
+    }, 3000);
+   });
+  }
+
+  function runCallbacks() {
+   const callbackResult = document.getElementById("callbackResult");
+   callbackResult.innerHTML = "Running Callbacks...";
+
+   Promise.all([callbackOne(), callbackTwo(), callbackThree()])
+    .then(results => {
+     callbackResult.innerHTML = results.join("<br>");
+    })
+    .catch(error => {
+     callbackResult.innerHTML = error;
+    });
+  }
+ </script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Check for Virus Infection</title>
+ <script>
+  function checkInfection() {
+   let virusComposition = document.getElementById("virusComposition").value.toLowerCase();
+   let bloodComposition = document.getElementById("bloodComposition").value.toLowerCase();
+   let result = document.getElementById("result");
+   
+   if (virusComposition.includes(bloodComposition)) {
+    result.innerHTML = "POSITIVE";
+   } else {
+    result.innerHTML = "NEGATIVE";
+   }
+  }
+ </script>
+</head>
+<body>
+ <h1>Check for Virus Infection</h1>
+ <label for="virusComposition">Enter virus composition:</label>
+ <input type="text" id="virusComposition"><br><br>
+ <label for="bloodComposition">Enter blood composition:</label>
+ <input type="text" id="bloodComposition"><br><br>
+ <button onclick="checkInfection()">Check</button><br><br>
+ <label for="result">Result:</label>
+ <span id="result"></span>
+</body>
+</html>
+

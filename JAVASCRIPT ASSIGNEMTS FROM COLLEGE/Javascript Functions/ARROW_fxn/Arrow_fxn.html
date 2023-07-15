@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arrow Functions</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          text-align: center;
+        }
+        h1 {
+          margin-bottom: 20px;
+        }
+        label {
+          display: block;
+          margin-bottom: 10px;
+        }
+        /*input[type="number"] {
+          padding: 5px;
+          margin-bottom: 10px;
+        }*/
+        input[type="text"] {
+          padding: 5px;
+          margin-bottom: 10px;
+        }
+        button {
+          padding: 10px;
+          background-color: #5c67cf;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        button:hover {
+          background-color: #3b218a;
+        }
+        p {
+          margin-top: 20px;
+        }
+      </style>
+  </head>
+  <body>
+    <h1>Arrow Functions</h1>
+    <label>First Name:</label>
+    <input type="text" id="firstName" />
+    <br />
+    <label>Last Name:</label>
+    <input type="text" id="lastName" />
+    <br />
+    <button onclick="createFullName()">Create Full Name</button>
+    <br /><br>&nbsp;
+    <label>Enter a Number:</label>
+    <input type="number" id="number" />
+    <br /><br>
+    <button onclick="doubleNumber()">Click to Double the Number</button>
+    <br /><br>&nbsp;
+    <label>Enter numbers separated by commas:</label>
+    <input type="text" id="numbers" />
+    <br />
+    <button onclick="getEvenNumbers()">Get Even Numbers</button>
+    <br />
+    <p id="output"></p>
+    <script>const createFullName = () => {
+        const firstName = document.getElementById("firstName").value;
+        const lastName = document.getElementById("lastName").value;
+        const fullName = `${firstName} ${lastName}`;
+        document.getElementById("output").innerHTML = `Full Name: ${fullName}`;
+      }
+      
+      const doubleNumber = () => {
+        const number = document.getElementById("number").value;
+        const doubledNumber = number * 2;
+        document.getElementById("output").innerHTML = `Doubled Number: ${doubledNumber}`;
+      }
+      
+      const getEvenNumbers = () => {
+        const numbers = document.getElementById("numbers").value.split(",").map(Number);
+        const evenNumbers = numbers.filter(num => num % 2 === 0);
+        document.getElementById("output").innerHTML = `Even Numbers: ${evenNumbers.join(", ")}`;
+      }</script>
+  </body>
+</html>
+
+
+
+

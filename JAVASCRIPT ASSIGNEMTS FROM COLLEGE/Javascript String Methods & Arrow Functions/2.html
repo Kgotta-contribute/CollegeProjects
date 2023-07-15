@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sum of Even Numbers</title>
+    <style>
+        table {
+          border-collapse: collapse;
+          width: 100%;
+          margin-bottom: 1em;
+        }
+        th, td {
+          border: 1px solid black;
+          padding: 0.5em;
+        }
+        th {
+          background-color: #eee;
+        }
+        body {
+          font-family: Arial, sans-serif;
+          text-align: center;
+        }
+        h1 {
+          margin-bottom: 20px;
+          padding: 10px;
+          background-color: #5c67cf;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        label {
+          display: block;
+          margin-bottom: 10px;
+        }
+        /*input[type="number"] {
+          padding: 5px;
+          margin-bottom: 10px;
+        }*/
+        input[type="text"] {
+          padding: 5px;
+          margin-bottom: 10px;
+        }
+        button {
+          padding: 10px;
+          background-color: #5c67cf;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        button:hover {
+          background-color: #3b218a;
+        }
+        p {
+          margin-top: 20px;
+        }
+      </style>
+  </head>
+  <body>
+    <h1>Sum of Even Numbers</h1>
+    <label>Enter numbers separated by commas:</label>
+    <input type="text" id="input" />
+    <button onclick="calculate()">Calculate</button>
+    <p id="output"></p>
+    <script>
+        const sumEvens = (arr) => {
+            return arr.filter(num => num % 2 === 0).reduce((acc, num) => acc + num, 0);
+          }
+          
+          const calculate = () => {
+            const input = document.getElementById("input").value;
+            const nums = input.split(",").map(num => Number(num.trim()));
+            const sum = sumEvens(nums);
+            document.getElementById("output").innerHTML = `Sum of even numbers: ${sum}`;
+          }
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array Comparison Program</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input[type="text"] {
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px;
+      background-color: #5c67cf		;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #3b218a;
+    }
+    p {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Comparing two Arrays Program</h1>
+
+  <label for="inputArray1">Enter comma-separated values for Array 1:</label>
+  <input type="text" id="inputArray1" name="inputArray1">
+
+  <label for="inputArray2">Enter comma-separated values for Array 2:</label>
+  <input type="text" id="inputArray2" name="inputArray2">
+
+  <button onclick="compareArrays()">Compare Arrays</button>
+
+  <p>Arrays are <span id="result"></span></p>
+
+  <script>
+    function compareArrays() 
+    {
+      // Get input from the user
+      var inputArray1 = document.getElementById("inputArray1").value;
+      var inputArray2 = document.getElementById("inputArray2").value;
+
+      // Split input strings into arrays of values
+      var v1 = inputArray1.split(",");
+      var v2 = inputArray2.split(",");
+
+      // Convert values to strings (if not already)
+      for (var i = 0; i < v1.length; i++) 
+      {
+        v1[i] = v1[i].trim();
+      }
+      for (var i = 0; i < v2.length; i++) 
+      {
+        v2[i] = v2[i].trim();
+      }
+
+      // Compare the arrays
+      var identical = (v1.length == v2.length && v1.every(function(element, index) 
+      {
+        return element === v2[index];
+      }));
+
+      // Displaying
+      document.getElementById("result").innerHTML = (identical ? "identical" : "not identical");
+    }
+  </script>
+
+</body>
+</html>

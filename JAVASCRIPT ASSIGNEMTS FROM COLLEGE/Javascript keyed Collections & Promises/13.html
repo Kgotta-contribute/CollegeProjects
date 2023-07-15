@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Object Properties List</title>
+ <style>
+  body {
+   font-family: Arial, sans-serif;
+  }
+ </style>
+</head>
+<body>
+ <h1>Object Properties List</h1>
+ <p>Enter a student object:</p>
+ <form>
+   <label for="name">Name:</label>
+   <input type="text" id="name" name="name" required><br><br>
+
+   <label for="usn">USN:</label>
+   <input type="text" id="usn" name="usn" required><br><br>
+
+   <label for="dept">Department:</label>
+   <input type="text" id="dept" name="dept" required><br><br>
+
+   <label for="id">ID:</label>
+   <input type="text" id="id" name="id"><br><br>
+
+   <label for="semester">Semester:</label>
+   <input type="text" id="semester" name="semester"><br><br>
+
+   <input type="button" value="Submit" onclick="listProperties()">
+ </form>
+
+ <p id="output"></p>
+
+ <script>
+  function listProperties() {
+   let name = document.getElementById("name").value;
+   let usn = document.getElementById("usn").value;
+   let dept = document.getElementById("dept").value;
+
+   let student = {name: name, usn: usn, dept: dept};
+   let props = Object.values(student).join(", ");
+   document.getElementById("output").innerHTML = props;
+  }
+ </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Starry Pattern</title>
+ <style>
+    body 
+    {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    h1 
+    {
+      text-align: center;
+      margin-bottom: 50px;
+      margin-top: 50px;
+    }
+    #input-div 
+    {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    #input-str 
+    {
+      font-size: 19px;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      margin-right: 10px;
+    }
+    #GeneratePattern 
+    {
+      font-size: 19px;
+      padding: 8px 16px;
+      background-color: #4c6daf;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    #output 
+    {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 24px;
+    }
+    #formLine
+    {
+        text-align: center;
+    }
+  </style>
+</head>
+<body>
+ <h1>Star Pattern generator Program</h1> &nbsp;&nbsp;
+ <form id="formLine">
+  <label id="output" for="rows">Enter the number of rows :   </label>
+  <input type="number" id="rows" name="rows">
+  <button id="GeneratePattern" type="button" onclick="generatePattern()">Generate Pattern</button>
+
+ </form>
+ <div id="output"></div>
+ <script>
+  function generatePattern() 
+  {
+   //Takes number of rows from the input field
+   let rows = parseInt(document.getElementById("rows").value);
+
+   let pattern = "";
+
+   for (let i = 1; i <= rows; i++) 
+   {
+    // Add the stars to the pattern for the current row
+    for (let j = 1; j <= i; j++) 
+    {
+     pattern += "* ";
+    }
+
+    // Add the spaces to the pattern for the current row
+    for (let k = 1; k <= (2 * rows - 2 * i); k++) 
+    {
+     pattern += " ";
+    }
+
+    // Add the stars to the pattern for the current row
+    for (let l = 1; l <= i; l++) 
+    {
+     if (l == i) 
+     {
+      pattern += "*";
+     } 
+     else 
+     {
+      pattern += "* ";
+     }
+    }
+
+    pattern += "<br>";
+   }
+
+   document.getElementById("output").innerHTML = pattern;
+  }
+ </script>
+</body>
+</html>
+

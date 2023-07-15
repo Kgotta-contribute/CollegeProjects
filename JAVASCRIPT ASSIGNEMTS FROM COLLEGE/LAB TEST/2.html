@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array vs Set</title>
+</head>
+<body>
+  <h1>Array vs Set</h1>
+
+  <label for="array-input">Enter array elements (comma-separated):</label>
+  <input type="text" id="array-input">
+  <button onclick="createArray()">Submit Array</button>
+
+  <br><br>
+
+  <label for="set-input">Enter set elements (comma-separated):</label>
+  <input type="text" id="set-input">
+  <button onclick="createSet()">Submit Set</button>
+
+  <br><br>
+
+  <label for="search-input">Enter element to search:</label>
+  <input type="text" id="search-input">
+  <button onclick="search()">Search</button>
+
+  <div id="output"></div>
+
+  <script>
+    let myArray = [];
+    let mySet = new Set();
+
+    function createArray() {
+      const input = document.getElementById("array-input").value;
+      myArray = input.split(",").map(Number);
+      console.log("Array:", myArray);
+    }
+
+    function createSet() {
+      const input = document.getElementById("set-input").value;
+      mySet = new Set(input.split(",").map(Number));
+      console.log("Set:", mySet);
+    }
+
+    function search() {
+      const target = Number(document.getElementById("search-input").value);
+
+      // Searching for a value in an array
+      const startArray = performance.now();
+      const arrayResult = myArray.includes(target);
+      const endArray = performance.now();
+      const arraySearchTime = endArray - startArray;
+
+      // Searching for a value in a set
+      const startSet = performance.now();
+      const setResult = mySet.has(target);
+      const endSet = performance.now();
+      const setSearchTime = endSet - startSet;
+
+      let output = "";
+      if (arrayResult) {
+        output += "The element was found in the array. Array search time: " + arraySearchTime + " milliseconds.<br>";
+      } else {
+        output += "The element was not found in the array.<br>";
+      }
+
+      if (setResult) {
+        output += "The element was found in the set. Set search time: " + setSearchTime + " milliseconds.<br>";
+      } else {
+        output += "The element was not found in the set.<br>";
+      }
+
+      document.getElementById("output").innerHTML = output;
+    }
+  </script>
+</body>
+</html>

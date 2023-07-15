@@ -1,0 +1,103 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+ <title>JavaScript Map and Set Examples</title>
+ <style>
+  body {
+   font-family: Arial, sans-serif;
+   background-color: #f5f5f5;
+  }
+  h1 {
+   color: #333;
+   text-align: center;
+   margin-top: 50px;
+  }
+  .container {
+   margin: 50px auto;
+   width: 50%;
+   background-color: #fff;
+   padding: 20px;
+   box-shadow: 0 0 10px rgba(0,0,0,0.2);
+   border-radius: 10px;
+  }
+ </style>
+</head>
+<body>
+    <label>Enter values separated by commas:</label>
+    <input type="text" id="inputValues">
+    <button onclick="addToSet()">Add to Set</button>
+    <button onclick="addToArr()">Add to Array</button>
+    <br>
+    <label>Enter value to search:</label>
+    <input type="text" id="searchValue">
+    <button onclick="searchSet()">Search Set</button>
+    <button onclick="searchArr()">Search Array</button>
+    <br>
+    <p id="output"></p>
+
+ <script>
+    let mySet = new Set();
+    let myArr = [];
+    
+    function addToSet() {
+      let inputVal = document.getElementById("inputValues").value;
+      let valArray = inputVal.split(",");
+      for (let val of valArray) {
+        mySet.add(val.trim());
+      }
+      document.getElementById("inputValues").value = "";
+      document.getElementById("output").innerHTML = "Values added to Set.";
+    }
+    
+    function addToArr() {
+      let inputVal = document.getElementById("inputValues").value;
+      let valArray = inputVal.split(",");
+      for (let val of valArray) {
+        myArr.push(val.trim());
+      }
+      document.getElementById("inputValues").value = "";
+      document.getElementById("output").innerHTML = "Values added to Array.";
+    }
+    
+    function searchSet() {
+      let searchVal = document.getElementById("searchValue").value;
+      if (mySet.has(searchVal.trim())) {
+        document.getElementById("output").innerHTML = "Value found in Set.";
+      } else {
+        document.getElementById("output").innerHTML = "Value not found in Set.";
+      }
+      document.getElementById("searchValue").value = "";
+    }
+    
+    function searchArr() {
+      let searchVal = document.getElementById("searchValue").value;
+      if (myArr.includes(searchVal.trim())) {
+        document.getElementById("output").innerHTML = "Value found in Array.";
+      } else {
+        document.getElementById("output").innerHTML = "Value not found in Array.";
+      }
+      document.getElementById("searchValue").value = "";
+    }
+    
+    
+    
+ </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Rows to Table</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 1em;
+      }
+      th, td {
+        border: 1px solid black;
+        padding: 0.5em;
+      }
+      th {
+        background-color: #eee;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      h1 {
+        margin-bottom: 20px;
+        padding: 10px;
+        background-color: #5c67cf;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      /*input[type="number"] {
+        padding: 5px;
+        margin-bottom: 10px;
+      }*/
+      input[type="text"] {
+        padding: 5px;
+        margin-bottom: 10px;
+      }
+      button {
+        padding: 10px;
+        background-color: #5c67cf;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #3b218a;
+      }
+      p {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Add Rows to Table</h1>
+    <label>Column 1 Data:</label>
+    <input type="text" id="column1Data" />
+    <label>Column 2 Data:</label>
+    <input type="text" id="column2Data" />
+    <button onclick="addRow()">Add Row</button>
+    <table id="myTable">
+      <thead>
+        <tr>
+          <th>Column 1</th>
+          <th>Column 2</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    <script>
+      const addRow = () => {
+        const table = document.getElementById("myTable");
+        const column1Data = document.getElementById("column1Data").value.trim();
+        const column2Data = document.getElementById("column2Data").value.trim();
+        const row = table.insertRow();
+        const cell1 = row.insertCell(0);
+        const cell2 = row.insertCell(1);
+        cell1.innerHTML = column1Data;
+        cell2.innerHTML = column2Data;
+        document.getElementById("column1Data").value = "";
+        document.getElementById("column2Data").value = "";
+      }
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Count Vowels</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          text-align: center;
+        }
+        h1 {
+          margin-bottom: 20px;
+          padding: 10px;
+          background-color: #5c67cf;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        label {
+          display: block;
+          margin-bottom: 10px;
+        }
+        /*input[type="number"] {
+          padding: 5px;
+          margin-bottom: 10px;
+        }*/
+        input[type="text"] {
+          padding: 5px;
+          margin-bottom: 10px;
+        }
+        button {
+          padding: 10px;
+          background-color: #5c67cf;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        button:hover {
+          background-color: #3b218a;
+        }
+        p {
+          margin-top: 20px;
+        }
+      </style>
+  </head>
+  <body>
+    <h1>Count Vowels</h1>
+    <label>Enter a string:</label>
+    <input type="text" id="input" />
+    <button id="countBtn">Count Vowels</button>
+    <p id="output"></p>
+    <script>
+        const countVowels = (str) => {
+            const vowels = ['a', 'e', 'i', 'o', 'u'];
+            let count = 0;
+            for (let char of str.toLowerCase()) {
+              if (vowels.includes(char)) {
+                count++;
+              }
+            }
+            return count;
+          }
+          
+          const countBtn = document.getElementById('countBtn');
+          countBtn.addEventListener('click', () => {
+            const input = document.getElementById('input').value;
+            const vowelCount = countVowels(input);
+            document.getElementById('output').innerHTML = `Number of vowels: ${vowelCount}`;
+          });
+    </script>
+  </body>
+</html>

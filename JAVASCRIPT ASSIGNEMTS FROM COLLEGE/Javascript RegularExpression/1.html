@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title>VTU USN Validation</title> 
+        <style> 
+            .valid { color: rgb(0, 128, 124); } 
+            .invalid { color: red; } 
+        </style> 
+    </head> 
+    <body> 
+        <h1>VTU USN Validation</h1> 
+        <label for="usn">Enter your VTU USN:</label> 
+        <input type="text" id="usn" name="usn"> 
+        <br><br> 
+        <button onclick="validateUSN()">Validate USN</button> 
+        
+        <script>
+        function validateUSN() 
+        { 
+            const usnRegex = /^[1-4][A-Za-z]{2}\d{2}[A-Za-z]{2}\d{3}$/; 
+            const usnInput = document.getElementById("usn").value; 
+            if (usnRegex.test(usnInput)) { alert("Valid USN"); 
+            document.getElementById("usn").className = "valid"; 
+        } 
+        else 
+        {
+            alert("Invalid USN"); 
+        
+            document.getElementById("usn").className = "invalid"; 
+        } 
+    }
+
+</script> 
+</body> 
+</html>
+
+
+

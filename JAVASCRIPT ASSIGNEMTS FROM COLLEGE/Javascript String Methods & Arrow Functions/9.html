@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>String Methods</title>
+    <style>
+        table {
+          border-collapse: collapse;
+          width: 100%;
+          margin-bottom: 1em;
+        }
+        th, td {
+          border: 1px solid black;
+          padding: 0.5em;
+        }
+        th {
+          background-color: #eee;
+        }
+        body {
+          font-family: Arial, sans-serif;
+          text-align: center;
+        }
+        h1 {
+          margin-bottom: 20px;
+          padding: 10px;
+          background-color: #5c67cf;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        label {
+          display: block;
+          margin-bottom: 10px;
+        }
+        /*input[type="number"] {
+          padding: 5px;
+          margin-bottom: 10px;
+        }*/
+        input[type="text"] {
+          padding: 5px;
+          margin-bottom: 10px;
+        }
+        button {
+          padding: 10px;
+          background-color: #5c67cf;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        button:hover {
+          background-color: #3b218a;
+        }
+        p {
+          margin-top: 20px;
+        }
+      </style>
+  </head>
+  <body>
+    <h1>String Methods</h1>
+    <button onclick="runStringMethods()">Run String Methods</button>
+    <script>
+        const runStringMethods = () => {
+            const inputString = prompt("Enter a string:");
+            
+            const length = inputString.length;
+            const firstCharacter = inputString.charAt(0);
+            const lastCharacter = inputString.charAt(length - 1);
+            const substring = inputString.substring(1, length - 1);
+            const uppercase = inputString.toUpperCase();
+            const lowercase = inputString.toLowerCase();
+            const indexOfO = inputString.indexOf("o");
+            const lastIndexOfO = inputString.lastIndexOf("o");
+            const replaced = inputString.replace("o", "0");
+            const splitString = inputString.split(" ");
+            const reversed = inputString.split("").reverse().join("");
+            
+            const outputString = `Input String: ${inputString}\n\n`
+                               + `Length: ${length}\n`
+                               + `First Character: ${firstCharacter}\n`
+                               + `Last Character: ${lastCharacter}\n`
+                               + `Substring: ${substring}\n`
+                               + `Uppercase: ${uppercase}\n`
+                               + `Lowercase: ${lowercase}\n`
+                               + `Index of "o": ${indexOfO}\n`
+                               + `Last Index of "o": ${lastIndexOfO}\n`
+                               + `Replaced "o" with "0": ${replaced}\n`
+                               + `Split String: ${splitString.join(", ")}\n`
+                               + `Reversed String: ${reversed}`;
+                               
+            alert(outputString);
+          }
+    </script>
+  </body>
+</html>

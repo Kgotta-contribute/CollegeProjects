@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Alternate Numbers</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+        }
+        h1,h3 {
+          text-align: center;
+          margin-bottom: 50px;
+          margin-top: 50px;
+        }
+        #input-div {
+          display: flex;
+          justify-content: center;
+          margin-top: 20px;
+          margin-right: 20px;
+        }
+        #alternateBtn {
+          font-size: 19px;
+          padding: 8px 16px;
+          background-color: #4c6daf;
+          color: #fff;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          margin-top: 50px;
+          margin-bottom: 50px;
+          margin-left:50px;
+        }
+        #output {
+          text-align: center;
+          margin-top: 20px;
+          font-size: 24px;
+        }
+        
+      </style>
+    <script>
+    function printNumbers() {
+        let num = parseInt(document.getElementById("inputNumber").value);
+        let output = "";
+        for (let i = 0; i <= num; i += 2) {
+          output += i + " ";
+        }
+        document.getElementById("output").innerHTML = output;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Enter a number till which you want to print alternate numbers</h1>
+    <h3>Enter a number:</h3>
+    <div id="input-div">
+        <input type="text" id="inputNumber" placeholder="Enter a number" />
+    <br>
+    <button id='alternateBtn' onclick="printNumbers()">Print Alternate Numbers</button>
+    <br>
+    </div>
+    <p id="output"></p>
+    
+  </body>
+</html>

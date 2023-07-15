@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>String Length</title>
+    <style>
+        table {
+          border-collapse: collapse;
+          width: 100%;
+          margin-bottom: 1em;
+        }
+        th, td {
+          border: 1px solid black;
+          padding: 0.5em;
+        }
+        th {
+          background-color: #eee;
+        }
+        body {
+          font-family: Arial, sans-serif;
+          text-align: center;
+        }
+        h1 {
+          margin-bottom: 20px;
+          padding: 10px;
+          background-color: #5c67cf;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        label {
+          display: block;
+          margin-bottom: 10px;
+        }
+        /*input[type="number"] {
+          padding: 5px;
+          margin-bottom: 10px;
+        }*/
+        input[type="text"] {
+          padding: 5px;
+          margin-bottom: 10px;
+        }
+        button {
+          padding: 10px;
+          background-color: #5c67cf;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        button:hover {
+          background-color: #3b218a;
+        }
+        p {
+          margin-top: 20px;
+        }
+      </style>
+  </head>
+  <body>
+    <h1>String Length</h1>
+    <label>Enter strings separated by commas:</label>
+    <input type="text" id="input" />
+    <button onclick="calculate()">Calculate</button>
+    <p id="output"></p>
+    <script>
+        const getStringLengths = (strings) => {
+            const lengths = [];
+            for (let str of strings) {
+              const length = prompt(`Enter the Length of the String "${str}":`);
+              lengths.push(length);
+            }
+            return lengths;
+          }
+          
+          const calculate = () => {
+            const input = document.getElementById("input").value;
+            const strings = input.split(",");
+            const lengths = getStringLengths(strings);
+            document.getElementById("output").innerHTML = `String Lengths: ${lengths.join(", ")}`;
+          }
+          
+    </script>
+  </body>
+</html>

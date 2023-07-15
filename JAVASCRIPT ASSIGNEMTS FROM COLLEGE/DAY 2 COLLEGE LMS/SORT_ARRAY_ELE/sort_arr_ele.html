@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array Sorting Program</title>
+</head>
+<body>
+
+  <h1>Array Sorting Program</h1>
+
+  <label for="inputArray">Enter comma-separated values:</label>
+  <input type="text" id="inputArray" name="inputArray">
+
+  <button onclick="sortArray()">Sort</button>
+
+  <p>Sorted Array: <span id="sortedArray"></span></p>
+
+  <script>
+    function sortArray() {
+      // Get the input array from the user
+      var inputArray = document.getElementById("inputArray").value;
+
+      // Split the input string into an array of values
+      var values = inputArray.split(",");
+
+      // Convert the values to numbers (if applicable)
+      for (var i = 0; i < values.length; i++) {
+        values[i] = Number(values[i].trim());
+      }
+
+      // Sort the array in ascending order
+      values.sort(function(a, b) {
+        return a - b;
+      });
+
+      // Display the sorted array on the webpage
+      document.getElementById("sortedArray").innerHTML = values.join(", ");
+    }
+  </script>
+
+</body>
+</html>

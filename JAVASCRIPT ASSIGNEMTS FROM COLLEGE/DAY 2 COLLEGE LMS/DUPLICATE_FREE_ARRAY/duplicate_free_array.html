@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array Duplicate Removal Program</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input[type="text"] {
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #3E8E41;
+    }
+    p {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Array Duplicate Removal Program</h1>
+
+  <label for="inputArray">Enter comma-separated values for the array:</label>
+  <input type="text" id="inputArray" name="inputArray">
+
+  <button onclick="removeDuplicates()">Remove Duplicates</button>
+
+  <p id="result"></p>
+
+  <script>
+    function removeDuplicates() {
+      // Get the input array from the user
+      var inputArray = document.getElementById("inputArray").value;
+
+      // Split the input string into an array of values
+      var values = inputArray.split(",");
+
+      // Remove duplicates from the array using the Set data structure
+      var uniqueValues = [...new Set(values)];
+
+      // Display the result on the webpage
+      document.getElementById("result").innerHTML = "Duplicate-free array:<br>" + uniqueValues.join(", ");
+    }
+  </script>
+
+</body>
+</html>

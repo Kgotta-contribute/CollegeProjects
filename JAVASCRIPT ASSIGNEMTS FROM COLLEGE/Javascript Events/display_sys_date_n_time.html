@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>System Date and Time</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          text-align: center;
+        }
+        h1 {
+          margin-bottom: 20px;
+        }
+        label {
+          display: block;
+          margin-bottom: 10px;
+        }
+        /*input[type="number"] {
+          padding: 5px;
+          margin-bottom: 10px;
+        }*/
+        input[type="text"] {
+          padding: 5px;
+          margin-bottom: 10px;
+        }
+        button {
+          padding: 10px;
+          background-color: #5c67cf;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        button:hover {
+          background-color: #3b218a;
+        }
+        p {
+          margin-top: 20px;
+        }
+      </style>
+  </head>
+  <body>
+    <h1>System Date and Time</h1>
+    <button id="showDateTime">Show Date and Time</button>
+    <p id="output"></p>
+    <script>
+        const showDateTime = () => {
+            const date = new Date();
+            const dateTimeString = date.toLocaleString();
+            document.getElementById("output").innerHTML = `Current Date and Time: ${dateTimeString}`;
+          }
+          
+          document.getElementById("showDateTime").addEventListener("click", showDateTime);
+          
+    </script>
+  </body>
+</html>

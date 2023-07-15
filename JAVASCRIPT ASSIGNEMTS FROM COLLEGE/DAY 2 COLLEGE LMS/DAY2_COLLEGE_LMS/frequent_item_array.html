@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Most Frequent Item Program</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input[type="text"] {
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px;
+      background-color: #5c67cf;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #3b218a;
+    }
+    p {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Most Frequent Item Programs</h1>
+
+  <label for="inputArray">Enter comma-separated values:</label>
+  <input type="text" id="inputArray" name="inputArray">
+
+  <button onclick="findMostFrequent()">Find Most Frequent</button>
+
+  <p>Most Frequent Item: <span id="mostFrequent"></span></p>
+
+  <script>
+    function findMostFrequent() 
+    {
+      // Taking InputArray
+      var inputArray = document.getElementById("inputArray").value;
+
+      // Split the input into an array of values
+      var values = inputArray.split(",");
+
+      // Convert the values to strings (if not already)
+      for (var i = 0; i < values.length; i++) 
+      {
+        values[i] = values[i].trim();
+      }
+
+      // Count the frequency of each item in the array
+      var frequency = {};
+      var maxCount = 0;
+      var mostFrequent = null;
+      for (var i = 0; i < values.length; i++) 
+      {
+        var item = values[i];
+        frequency[item] = (frequency[item] || 0) + 1;
+        if (frequency[item] > maxCount) 
+        {
+          maxCount = frequency[item];
+          mostFrequent = item;
+        }
+      }
+
+      // Displaying
+      document.getElementById("mostFrequent").innerHTML = mostFrequent;
+    }
+  </script>
+
+</body>
+</html>

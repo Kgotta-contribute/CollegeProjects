@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Farm Inventory</title>
+ <style>
+    body {
+        background: linear-gradient(to bottom, #e8afc6, #e3c3d0);
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 20px;
+      }
+      
+      label {
+        display: inline-block;
+        margin-bottom: 10px;
+      }
+      
+      input[type="number"] {
+        width: 50px;
+      }
+      
+      button {
+        background-color: #4a5cc3;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+      
+      #output {
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+ </style>
+</head>
+<body>
+ 
+<div>
+    <label for="numCows">Number of Cows:</label>
+    <input type="number" id="numCows">
+  </div>
+  <div>
+    <label for="numChickens">Number of Chickens:</label>
+    <input type="number" id="numChickens">
+  </div>
+  <button onclick="printFarmInventory()">Print Farm Inventory</button>
+  
+  <div id="output"></div>
+
+ <script>
+    function printFarmInventory() {
+        const numCows = document.getElementById("numCows").value;
+        const numChickens = document.getElementById("numChickens").value;
+        const cowString = zeroPad(numCows, 3) + " Cows";
+        const chickenString = zeroPad(numChickens, 3) + " Chickens";
+        const outputDiv = document.getElementById("output");
+        outputDiv.innerHTML = cowString + " ".repeat(25 - cowString.length) + chickenString;
+      }
+      
+      function zeroPad(number, width) {
+        let str = String(number);
+        while (str.length < width) {
+          str = "0" + str;
+        }
+        return str;
+      }
+ </script>
+</body>
+</html> 

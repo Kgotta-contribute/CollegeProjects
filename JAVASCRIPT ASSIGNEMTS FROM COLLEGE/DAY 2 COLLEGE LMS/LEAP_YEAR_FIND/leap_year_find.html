@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leap Year Finder</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input[type="number"] {
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #3E8E41;
+    }
+    p {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Leap Year Finder</h1>
+
+  <label for="startYear">Enter the starting year:</label>
+  <input type="number" id="startYear" name="startYear">
+
+  <label for="endYear">Enter the ending year:</label>
+  <input type="number" id="endYear" name="endYear">
+
+  <button onclick="findLeapYears()">Find Leap Years</button>
+
+  <p id="result"></p>
+
+  <script>
+    function findLeapYears() {
+      // Get the start and end years from the user
+      var startYear = parseInt(document.getElementById("startYear").value);
+      var endYear = parseInt(document.getElementById("endYear").value);
+
+      // Initialize an array to hold the leap years
+      var leapYears = [];
+
+      // Iterate over the range of years and check for leap years
+      for (var year = startYear; year <= endYear; year++) {
+        // A year is a leap year if it is divisible by 4 and not divisible by 100,
+        // or if it is divisible by 400
+        if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+          leapYears.push(year);
+        }
+      }
+
+      // Display the result on the webpage
+      if (leapYears.length === 0) {
+        document.getElementById("result").innerHTML = "There are no leap years in this range.";
+      } else {
+        document.getElementById("result").innerHTML = "Leap years in the range " + startYear + " to " + endYear + ":<br>" + leapYears.join(", ");
+      }
+    }
+  </script>
+
+</body>
+</html>

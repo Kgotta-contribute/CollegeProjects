@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Book Hotel after Flight</title>
+</head>
+<body>
+ <label for="flight-number">Enter Flight Number:</label>
+ <input type="text" id="flight-number" name="flight-number"><br>
+
+ <label for="hotel-name">Enter Hotel Name:</label>
+ <input type="text" id="hotel-name" name="hotel-name"><br>
+
+ <button onclick="bookHotelAfterFlight()">Book Hotel after Flight</button>
+
+ <p id="output"></p>
+
+ <script>
+    
+function bookFlight(flightNumber) {
+    return new Promise(function(resolve, reject) {
+     // Simulate API call for booking a flight
+     setTimeout(function() {
+      if (flightNumber !== "") {
+       resolve("Flight booked successfully.");
+      } else {
+       reject("Flight number is required.");
+      }
+     }, 2000);
+    });
+   }
+   
+   function bookHotel(hotelName) {
+    return new Promise(function(resolve, reject) {
+     // Simulate API call for booking a hotel
+     setTimeout(function() {
+      if (hotelName !== "") {
+       resolve("Hotel booked successfully.");
+      } else {
+       reject("Hotel name is required.");
+      }
+     }, 2000);
+    });
+   }
+   
+   async function bookHotelAfterFlight() {
+    const flightNumber = document.getElementById("flight-number").value;
+    const hotelName = document.getElementById("hotel-name").value;
+    const output = document.getElementById("output");
+   
+    try {
+     const flightBookingResult = await bookFlight(flightNumber);
+     output.innerHTML += flightBookingResult + "<br>";
+   
+     const hotelBookingResult = await bookHotel(hotelName);
+     output.innerHTML += hotelBookingResult;
+    } catch(error) {
+     output.innerHTML = error;
+    }
+   }   
+ </script>
+</body>
+</html>
+

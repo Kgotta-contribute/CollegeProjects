@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>JavaScript Promise Examples</title>
+ <style>
+  body {
+   font-family: Arial, sans-serif;
+   background-color: #f5f5f5;
+  }
+  h1 {
+   color: #333;
+   text-align: center;
+   margin-top: 50px;
+  }
+  .container {
+   margin: 50px auto;
+   width: 50%;
+   background-color: #fff;
+   padding: 20px;
+   box-shadow: 0 0 10px rgba(0,0,0,0.2);
+   border-radius: 10px;
+  }
+ </style>
+</head>
+<body>
+ <div class="container">
+  <h1>JavaScript Promise Examples</h1>
+  <hr>
+  <h2>Program 1: numTest Function</h2>
+  <p>Enter a number below to test if it is less than or greater than 20:</p>
+  <input type="text" id="numberInput">
+  <button onclick="testNumber()">Test</button>
+  <p id="numResult"></p>
+  <hr>
+  
+ </div>
+
+ <script>
+  // Program 1: numTest Function
+  function numTest(number) {
+   return new Promise((resolve, reject) => {
+    if (number < 20) {
+     resolve(`${number} is less than 20`);
+    } else if (number > 20) {
+     resolve(`${number} is greater than 20`);
+    } else {
+     reject(`${number} is equal to 20`);
+    }
+   });
+  }
+
+  function testNumber() {
+   const numberInput = document.getElementById("numberInput").value;
+   numTest(numberInput)
+    .then(result => {
+     document.getElementById("numResult").innerHTML = result;
+    })
+    .catch(error => {
+     document.getElementById("numResult").innerHTML = error;
+    });
+  }
+
+  
+ </script>
+</body>
+</html>
+
+
+

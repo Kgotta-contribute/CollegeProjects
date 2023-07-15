@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jump Search</title>
+    <style>
+        table {
+          border-collapse: collapse;
+          width: 100%;
+          margin-bottom: 1em;
+        }
+        th, td {
+          border: 1px solid black;
+          padding: 0.5em;
+        }
+        th {
+          background-color: #eee;
+        }
+        body {
+          font-family: Arial, sans-serif;
+          text-align: center;
+        }
+        h1 {
+          margin-bottom: 20px;
+          padding: 10px;
+          background-color: #5c67cf;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        label {
+          display: block;
+          margin-bottom: 10px;
+        }
+        /*input[type="number"] {
+          padding: 5px;
+          margin-bottom: 10px;
+        }*/
+        input[type="text"] {
+          padding: 5px;
+          margin-bottom: 10px;
+        }
+        button {
+          padding: 10px;
+          background-color: #5c67cf;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        button:hover {
+          background-color: #3b218a;
+        }
+        p {
+          margin-top: 20px;
+        }
+      </style>
+  </head>
+  <body>
+    <h1>Jump Search</h1>
+    <label>Enter numbers separated by commas:</label>
+    <input type="text" id="numbers" />
+    <br />
+    <label>Key:</label>
+    <input type="number" id="key" />
+    <br />
+    <button onclick="jumpSearch()">Search</button>
+    <br />
+    <p id="output"></p>
+    <script>
+        const jumpSearch = () => {
+            const numbers = document.getElementById("numbers").value.split(",").map(Number);
+            const key = Number(document.getElementById("key").value);
+          
+            // Sort the numbers in ascending order
+            numbers.sort((a, b) => a - b);
+          
+            // Find the block size
+            const blockSize = Math.floor(Math.sqrt(numbers.length));
+          
+            // Find the block where the key could be present
+            let blockIndex = 0;
+            while (blockIndex < numbers.length && numbers[blockIndex] <= key) {
+              blockIndex += blockSize;
+            }
+          
+            // Perform linear search within the block
+            let startIndex = blockIndex - blockSize;
+            while (startIndex < numbers.length && numbers[startIndex] <= key) {
+              if (numbers[startIndex] === key) {
+                document.getElementById("output").innerHTML = "Key found!";
+                return;
+              }
+              startIndex++;
+            }
+          
+            // Key not found
+            document.getElementById("output").innerHTML = "Key not found.";
+          }
+          
+    </script>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Map vs Object Example</title>
+ <style>
+  body {
+   font-family: Arial, sans-serif;
+  }
+ </style>
+</head>
+<body>
+ <h1>Map vs Object Example</h1>
+ <p>Enter a key:</p>
+ <input type="text" id="keyInput">
+ <p>Enter a value:</p>
+ <input type="text" id="valueInput">
+ <button onclick="addKeyValuePair()">Add Key-Value Pair</button>
+ <button onclick="removeKeyValuePair()">Remove Key-Value Pair</button>
+ <p id="output"></p>
+
+ <script>
+  // Create an empty map
+  let myMap = new Map();
+
+  // Create an empty object
+  let myObject = {};
+
+  function addKeyValuePair() {
+   let key = document.getElementById("keyInput").value;
+   let value = document.getElementById("valueInput").value;
+
+   // Add the key-value pair to the map
+   myMap.set(key, value);
+
+   // Add the key-value pair to the object
+   myObject[key] = value;
+
+   // Display the updated key-value pairs for both map and object
+   let output = "Map: ";
+   for (let [key, value] of myMap) {
+    output += key + ": " + value + ", ";
+   }
+   output += "<br>Object: ";
+   for (let key in myObject) {
+    output += key + ": " + myObject[key] + ", ";
+   }
+   document.getElementById("output").innerHTML = output;
+
+   // Clear the input fields
+   document.getElementById("keyInput").value = "";
+   document.getElementById("valueInput").value = "";
+  }
+
+  function removeKeyValuePair() {
+   let key = document.getElementById("keyInput").value;
+
+   // Remove the key-value pair from the map
+   myMap.delete(key);
+
+   // Remove the key-value pair from the object
+   delete myObject[key];
+
+   // Display the updated key-value pairs for both map and object
+   let output = "Map: ";
+   for (let [key, value] of myMap) {
+    output += key + ": " + value + ", ";
+   }
+   output += "<br>Object: ";
+   for (let key in myObject) {
+    output += key + ": " + myObject[key] + ", ";
+   }
+   document.getElementById("output").innerHTML = output;
+
+   // Clear the input field
+   document.getElementById("keyInput").value = "";
+  }
+ </script>
+</body>
+</html>

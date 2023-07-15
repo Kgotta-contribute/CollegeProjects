@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Color Code Display</title>
+ <script>
+  const colors = {
+   R: "Red",
+   B: "Blue",
+   G: "Green",
+   O: "Orange",
+   Y: "Yellow",
+   W: "White"
+  };
+
+  function displayColor() {
+   // get the input value from the user
+   let colorCode = document.getElementById("colorCode").value.toUpperCase();
+   // look up the color code in the colors object
+   let color = colors[colorCode] || "Invalid Input";
+   // display the color on page
+   document.getElementById("colorDisplay").textContent = color;
+  }
+ </script>
+</head>
+<body>
+ <h1>Color Code Display</h1>
+ <label for="colorCode">Enter Color Code:</label>
+ <input type="text" id="colorCode">
+ <button onclick="displayColor()">Display Color</button>
+ <p id="colorDisplay"></p>
+</body>
+</html>
+
+

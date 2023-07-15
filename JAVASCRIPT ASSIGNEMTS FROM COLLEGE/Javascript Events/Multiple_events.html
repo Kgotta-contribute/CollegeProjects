@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events Example</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          text-align: center;
+        }
+        h1 {
+          margin-bottom: 20px;
+          padding: 10px;
+          background-color: #5c67cf;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        label {
+          display: block;
+          margin-bottom: 10px;
+        }
+        /*input[type="number"] {
+          padding: 5px;
+          margin-bottom: 10px;
+        }*/
+        input[type="text"] {
+          padding: 5px;
+          margin-bottom: 10px;
+        }
+        button {
+          padding: 10px;
+          background-color: #5c67cf;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        button:hover {
+          background-color: #3b218a;
+        }
+        p {
+          margin-top: 20px;
+        }
+      </style>
+  </head>
+  <body>
+    <h1>Events Example</h1>
+    <label>Enter Text:</label>
+    <input type="text" id="textInput" 
+      onclick="displayMessage('You clicked the text input field!')"
+      onmouseover="displayMessage('You moved the mouse over the text input field!')"
+      onmouseout="displayMessage('You moved the mouse out of the text input field!')"
+      onkeyup="displayMessage(`You typed: ${event.key}`)"
+      onkeydown="displayMessage(`You pressed the ${event.key} key!`)"
+      onchange="displayMessage(`The text input value changed to: ${event.target.value}`)"
+      onfocus="displayMessage('The text input field is now in focus!')"
+      onblur="displayMessage('The text input field lost focus!')"
+    />
+    <br />
+    <p id="output"></p>
+    <script>
+        const displayMessage = (message) => {
+            document.getElementById("output").innerHTML = message;
+          }
+    </script>
+  </body>
+</html>

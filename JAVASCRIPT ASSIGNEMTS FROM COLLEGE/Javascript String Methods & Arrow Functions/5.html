@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pass by Value and Pass by Reference</title>
+    <style>
+        table {
+          border-collapse: collapse;
+          width: 100%;
+          margin-bottom: 1em;
+        }
+        th, td {
+          border: 1px solid black;
+          padding: 0.5em;
+        }
+        th {
+          background-color: #eee;
+        }
+        body {
+          font-family: Arial, sans-serif;
+          text-align: center;
+        }
+        h1 {
+          margin-bottom: 20px;
+          padding: 10px;
+          background-color: #5c67cf;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        label {
+          display: block;
+          margin-bottom: 10px;
+        }
+        /*input[type="number"] {
+          padding: 5px;
+          margin-bottom: 10px;
+        }*/
+        input[type="text"] {
+          padding: 5px;
+          margin-bottom: 10px;
+        }
+        button {
+          padding: 10px;
+          background-color: #5c67cf;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        button:hover {
+          background-color: #3b218a;
+        }
+        p {
+          margin-top: 20px;
+        }
+      </style>
+  </head>
+  <body>
+    <h1>Pass by Value and Pass by Reference</h1>
+    <label>Enter a number:</label>
+    <input type="number" id="number" />
+    <br />
+    <button onclick="passByValue()">Pass by Value</button>
+    <br />
+    <label>Enter an array:</label>
+    <input type="text" id="array" />
+    <br />
+    <button onclick="passByReference()">Pass by Reference</button>
+    <br />
+    <p id="output"></p>
+    <script>
+        const passByValue = () => {
+            let number = Number(document.getElementById("number").value);
+            let message = `Before: number = ${number}\n`;
+            changeNumber(number);
+            message += `After: number = ${number}\n`;
+            document.getElementById("output").innerHTML = message;
+          }
+          
+          const passByReference = () => {
+            let array = document.getElementById("array").value.split(",").map(Number);
+            let message = `Before: array = [${array}]\n`;
+            changeArray(array);
+            message += `After: array = [${array}]\n`;
+            document.getElementById("output").innerHTML = message;
+          }
+          
+          const changeNumber = (num) => {
+            num = num * 2;
+          }
+          
+          const changeArray = (arr) => {
+            arr.push(0);
+          }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arrow_Function_ReverseNum</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 50px;
+        margin-top: 50px;
+      }
+      #input-div {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      #input-num {
+        font-size: 19px;
+        padding: 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        margin-right: 10px;
+      }
+      #reverse-btn {
+        font-size: 19px;
+        padding: 8px 16px;
+        background-color: #4c6daf;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      #output {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JavaScript arrow function to reverse a number</h1>
+    <div id="input-div">
+      <input type="number" id="input-num" placeholder="Enter a number" />
+      <button id="reverse-btn">Reverse Number</button>
+    </div>
+    <div id="output"></div>
+    <script>
+      const reverseNum = (num) => {
+        return (
+          parseFloat(num.toString().split("").reverse().join("")) *
+          Math.sign(num)
+        );
+      };
+
+      const inputNum = document.getElementById("input-num");
+      const reverseBtn = document.getElementById("reverse-btn");
+      const output = document.getElementById("output");
+
+      reverseBtn.addEventListener("click", () => {
+        const num = inputNum.value;
+        const reversedNum = reverseNum(num);
+        output.textContent = `The reversed number is: ${reversedNum}`;
+      });
+    </script>
+  </body>
+</html>

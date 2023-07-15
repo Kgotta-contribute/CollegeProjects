@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array Comparison Program</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input[type="text"] {
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #3E8E41;
+    }
+    p {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Array Comparison Program</h1>
+
+  <label for="inputArray1">Enter comma-separated values for Array 1:</label>
+  <input type="text" id="inputArray1" name="inputArray1">
+
+  <label for="inputArray2">Enter comma-separated values for Array 2:</label>
+  <input type="text" id="inputArray2" name="inputArray2">
+
+  <button onclick="compareArrays()">Compare Arrays</button>
+
+  <p>Arrays are <span id="result"></span></p>
+
+  <script>
+    function compareArrays() {
+      // Get the input arrays from the user
+      var inputArray1 = document.getElementById("inputArray1").value;
+      var inputArray2 = document.getElementById("inputArray2").value;
+
+      // Split the input strings into arrays of values
+      var values1 = inputArray1.split(",");
+      var values2 = inputArray2.split(",");
+
+      // Convert the values to strings (if not already)
+      for (var i = 0; i < values1.length; i++) {
+        values1[i] = values1[i].trim();
+      }
+      for (var i = 0; i < values2.length; i++) {
+        values2[i] = values2[i].trim();
+      }
+
+      // Compare the arrays
+      var identical = (values1.length == values2.length && values1.every(function(element, index) {
+        return element === values2[index];
+      }));
+
+      // Display the result on the webpage
+      document.getElementById("result").innerHTML = (identical ? "identical" : "not identical");
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Promises</title>
+</head>
+<body>
+  <h1>JavaScript Promises</h1>
+
+  <label for="input">Enter a number:</label>
+  <input type="number" id="input">
+  <button onclick="processNumber()">Process Number</button>
+
+  <div id="output"></div>
+
+  <script>
+    function processData(number) {
+      return new Promise((resolve, reject) => {
+        if (number > 0) {
+          resolve("The number is positive.");
+        } else if (number < 0) {
+          reject("The number is negative.");
+        } else {
+          reject("The number is zero.");
+        }
+      });
+    }
+
+    function processNumber() {
+      const input = document.getElementById("input").value;
+      const number = parseInt(input);
+
+      processData(number)
+        .then((result) => {
+          document.getElementById("output").innerHTML = result;
+        })
+        .catch((error) => {
+          document.getElementById("output").innerHTML = error;
+        });
+    }
+  </script>
+</body>
+</html>

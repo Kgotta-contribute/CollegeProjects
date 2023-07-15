@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Disarium Numbers</title>
+    <style>
+        table {
+          border-collapse: collapse;
+          width: 100%;
+          margin-bottom: 1em;
+        }
+        th, td {
+          border: 1px solid black;
+          padding: 0.5em;
+        }
+        th {
+          background-color: #eee;
+        }
+        body {
+          font-family: Arial, sans-serif;
+          text-align: center;
+        }
+        h1 {
+          margin-bottom: 20px;
+          padding: 10px;
+          background-color: #5c67cf;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        label {
+          display: block;
+          margin-bottom: 10px;
+        }
+        /*input[type="number"] {
+          padding: 5px;
+          margin-bottom: 10px;
+        }*/
+        input[type="text"] {
+          padding: 5px;
+          margin-bottom: 10px;
+        }
+        button {
+          padding: 10px;
+          background-color: #5c67cf;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        button:hover {
+          background-color: #3b218a;
+        }
+        p {
+          margin-top: 20px;
+        }
+      </style>
+  </head>
+  <body>
+    <h1>Disarium Numbers</h1>
+    <button onclick="findDisariumNumbers()">Find Disarium Numbers</button>
+    <br />
+    <p id="output"></p>
+    <script>
+        const isDisariumNumber = (num) => {
+            const numString = num.toString();
+            let sum = 0;
+            for (let i = 0; i < numString.length; i++) {
+              sum += Math.pow(Number(numString[i]), i + 1);
+            }
+            return sum === num;
+          }
+          
+          const findDisariumNumbers = () => {
+            let disariumNumbers = [];
+            for (let i = 1; i <= 100; i++) {
+              if (isDisariumNumber(i)) {
+                disariumNumbers.push(i);
+              }
+            }
+            document.getElementById("output").innerHTML = `Disarium Numbers: ${disariumNumbers.join(", ")}`;
+          }
+    </script>
+  </body>
+</html>
+

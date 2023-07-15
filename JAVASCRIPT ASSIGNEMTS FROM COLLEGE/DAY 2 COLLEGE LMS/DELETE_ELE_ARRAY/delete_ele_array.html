@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Delete Element from Array</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input[type="number"] {
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    input[type="text"] {
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #3E8E41;
+    }
+    p {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Delete Element from Array</h1>
+
+  <label for="arrayInput">Enter the array:</label>
+  <input type="text" id="arrayInput" name="arrayInput">
+
+  <label for="position">Enter the position of the element to delete:</label>
+  <input type="number" id="position" name="position">
+
+  <button onclick="deleteElement()">Delete Element</button>
+
+  <p id="result"></p>
+
+  <script>
+    function deleteElement() {
+      // Get the array from the user
+      var arrayInput = document.getElementById("arrayInput").value;
+
+      // Parse the array from the input string
+      var array = JSON.parse("[" + arrayInput + "]");
+
+      // Get the position of the element to delete
+      var position = parseInt(document.getElementById("position").value);
+
+      // Delete the element at the specified position
+      for (var i = position; i < array.length - 1; i++) {
+        array[i] = array[i + 1];
+      }
+      array.length = array.length - 1;
+
+      // Display the updated array on the webpage
+      document.getElementById("result").innerHTML = "The updated array is:<br>" + JSON.stringify(array);
+    }
+  </script>
+
+</body>
+</html>

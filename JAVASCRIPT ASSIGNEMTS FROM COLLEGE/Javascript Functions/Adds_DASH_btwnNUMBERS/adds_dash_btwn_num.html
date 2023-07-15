@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dash Twixt Two Evens</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          text-align: center;
+        }
+        h1 {
+          margin-bottom: 20px;
+        }
+        label {
+          display: block;
+          margin-bottom: 10px;
+        }
+        /*input[type="number"] {
+          padding: 5px;
+          margin-bottom: 10px;
+        }*/
+        input[type="text"] {
+          padding: 5px;
+          margin-bottom: 10px;
+        }
+        button {
+          padding: 10px;
+          background-color: #5c67cf;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        button:hover {
+          background-color: #3b218a;
+        }
+        p {
+          margin-top: 20px;
+        }
+      </style>
+  </head>
+  <body>
+    <h1>Adding Dash between two Even Numbers</h1>
+    <p>Enter a number:</p>
+    <input type="text" id="inputNum">
+    <button onclick="showOutput()">Submit</button>
+    <p id="output"></p>
+    <script>
+      const dashTwixt2Evens = (num) => {
+        const numArr = String(num).split('');
+        let output = '';
+
+        for (let i = 0; i < numArr.length; i++) 
+        {
+          output += numArr[i];
+          if (numArr[i] % 2 === 0 && numArr[i+1] % 2 === 0) 
+          {
+            output += '-';
+          }
+        }
+        return output;
+      }
+
+      const showOutput = () => {
+        const inputNum = document.getElementById('inputNum').value;
+        const output = document.getElementById('output');
+        output.innerText = dashTwixt2Evens(inputNum);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Set Operations</title>
+    <style>
+      .output {
+        margin-top: 10px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <h1>Set Operations</h1>
+    <label for="input">Enter a value to add to the set:</label>
+    <input type="text" id="input" name="input">
+    <br><br>
+    <button onclick="addToSet()">Add to Set</button>
+    <br><br>
+    <label for="search">Enter a value to search in the set:</label>
+    <input type="text" id="search" name="search">
+    <br><br>
+    <button onclick="searchInSet()">Search in Set</button>
+    <br><br>
+    <button onclick="iterateSet()">Iterate over Set</button>
+    <p class="output" id="output"></p>
+    <script>
+        let set = new Set();
+
+function addToSet() {
+  const inputValue = document.getElementById("input").value;
+  set.add(inputValue);
+  document.getElementById("output").innerHTML = `Added ${inputValue} to set`;
+}
+
+function searchInSet() {
+  const searchValue = document.getElementById("search").value;
+  if (set.has(searchValue)) {
+    document.getElementById("output").innerHTML = `${searchValue} is in set`;
+  } else {
+    document.getElementById("output").innerHTML = `${searchValue} is not in set`;
+  }
+}
+
+function iterateSet() {
+  let outputString = "Set contents: ";
+  set.forEach((value) => {
+    outputString += `${value}, `;
+  });
+  document.getElementById("output").innerHTML = outputString.slice(0, -2);
+}
+    </script>
+  </body>
+</html>

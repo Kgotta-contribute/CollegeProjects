@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fibonacci Sequence Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input[type="number"] {
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #3E8E41;
+    }
+    p {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Fibonacci Sequence Generator</h1>
+
+  <label for="numTerms">Enter the number of terms:</label>
+  <input type="number" id="numTerms" name="numTerms">
+
+  <button onclick="generateFibonacciSequence()">Generate Sequence</button>
+
+  <p id="result"></p>
+
+  <script>
+    function generateFibonacciSequence() {
+      // Get the number of terms from the user
+      var numTerms = parseInt(document.getElementById("numTerms").value);
+
+      // Initialize the first two terms of the sequence
+      var a = 0;
+      var b = 1;
+
+      // Initialize an array to hold the sequence
+      var fibonacciSequence = [];
+
+      // Generate the sequence up to the specified number of terms
+      for (var i = 0; i < numTerms; i++) {
+        fibonacciSequence.push(a);
+        var c = a + b;
+        a = b;
+        b = c;
+      }
+
+      // Display the result on the webpage
+      document.getElementById("result").innerHTML = "The first " + numTerms + " terms of the Fibonacci sequence are:<br>" + fibonacciSequence.join(", ");
+    }
+  </script>
+
+</body>
+</html>

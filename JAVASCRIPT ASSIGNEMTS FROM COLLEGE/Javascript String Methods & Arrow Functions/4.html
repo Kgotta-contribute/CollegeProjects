@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kg to Lbs Converter</title>
+    <style>
+        table {
+          border-collapse: collapse;
+          width: 100%;
+          margin-bottom: 1em;
+        }
+        th, td {
+          border: 1px solid black;
+          padding: 0.5em;
+        }
+        th {
+          background-color: #eee;
+        }
+        body {
+          font-family: Arial, sans-serif;
+          text-align: center;
+        }
+        h1 {
+          margin-bottom: 20px;
+          padding: 10px;
+          background-color: #5c67cf;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        label {
+          display: block;
+          margin-bottom: 10px;
+        }
+        /*input[type="number"] {
+          padding: 5px;
+          margin-bottom: 10px;
+        }*/
+        input[type="text"] {
+          padding: 5px;
+          margin-bottom: 10px;
+        }
+        button {
+          padding: 10px;
+          background-color: #5c67cf;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        button:hover {
+          background-color: #3b218a;
+        }
+        p {
+          margin-top: 20px;
+        }
+      </style>
+  </head>
+  <body>
+    <h1>Kg to Lbs Converter</h1>
+    <label>Weight in Kg:</label>
+    <input type="number" id="weight" />
+    <button onclick="convertWeight()">Convert</button>
+    <p id="output"></p>
+    <script>
+        const convertWeight = () => {
+            const weightInKg = document.getElementById("weight").value;
+            const weightInLbs = weightInKg * 2.2;
+            let message;
+            if (weightInLbs > 150) {
+              message = "obese";
+            } else if (weightInLbs >= 100 && weightInLbs <= 150) {
+              message = "you are ok";
+            } else {
+              message = "underweight";
+            }
+            document.getElementById("output").innerHTML = `Weight in Lbs: ${weightInLbs}<br/>${message}`;
+          }
+          
+    </script>
+  </body>
+</html>
