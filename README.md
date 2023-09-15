@@ -77,4 +77,8 @@ Well, This repo till date (26 May 2023) just has the
 
 
 - ### "WHEN WE SPOKE FOR OUR ASSIGNMENTS"
--<img src="https://github.com/Kgotta-contribute/testrepo/blob/main/HeartDisease_ML_Assignment.mp4?raw=true" alt="ML ASSIGNMENT Presentation">
+- Click the button below to watch in HD
+<div style="position:relative;width:fit-content;height:fit-content;">
+            <a style="position:absolute;top:20px;right:1rem;opacity:0.8;" href="https://clipchamp.com/watch/dN3vbeAHQ1r?utm_source=embed&utm_medium=embed&utm_campaign=watch">
+                <img loading="lazy" style="height:22px;" src="https://clipchamp.com/e.svg" alt="Made with Clipchamp" />
+            </a>
