@@ -84,3 +84,8 @@ Well, This repo till date (26 May 2023) just has the
             <a style="position:absolute;top:20px;right:1rem;opacity:0.8;" href="https://clipchamp.com/watch/dN3vbeAHQ1r?utm_source=embed&utm_medium=embed&utm_campaign=watch">
                 <img loading="lazy" style="height:22px;" src="https://clipchamp.com/e.svg" alt="Made with Clipchamp" />
             </a>
+
+
+-------------------------------------------
+
+- ### "ANDROID FLUTTER CODE HAS ONLY 5 FLUTTER CODE & OTHERWISE WE'VE LEARNED JAVA ANDROID CODE"
