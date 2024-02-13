@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="279dp"
+        android:layout_height="68dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.19" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="269dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.929"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
+
+
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="189dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="44dp"
+        android:text="CheckBox1"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox2"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="171dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="187dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="44dp"
+        android:text="CheckBox2"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox3"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="174dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="186dp"
+        android:layout_height="52dp"
+        android:text="CheckBox3"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="174dp"
+        tools:layout_editor_absoluteY="568dp" />
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="189dp"
+        android:layout_height="57dp"
+        android:text="LOGIN"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.783"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox3"
+        app:layout_constraintVertical_bias="0.331" />
+
+    <ScrollView
+        android:layout_width="116dp"
+        android:layout_height="891dp"
+        tools:layout_editor_absoluteX="1dp"
+        android:background="@color/green"
+        tools:layout_editor_absoluteY="2dp"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rotation="270"
+                android:rotationY="0"
+                android:text="Sample Content 1" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="96dp"
+        android:layout_height="816dp"
+        android:ems="10"
+        android:inputType="text"
+        android:rotation="270"
+        android:rotationY="0"
+        android:text="CHECKOUT"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.269" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
