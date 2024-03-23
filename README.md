@@ -6,12 +6,26 @@ programming languages, frameworks, libraries & all those untouched fields in Tec
 
 Well, TBH, That's exactly what college made us do in past 6 semesters!!
 
-Well, This repo till date (26 May 2023) just has the 
-  1. Rstudio's R-markdown file & explaination pdf which also contains the code (named "ToSubmit.pdf")
-  2. Python's DataMining jupyter notebook file with an explanation pdf on how problem statement is achieved (named "GitHUB_Knn_Explaination.pdf")
+Well, This repo till date (23 March 2024) just has the 
+  1. Microsoft Power BI workbook from 8th sem
+  1. Rstudio's R-markdown file & explaination pdf which also contains the code (named "ToSubmit.pdf") from 6th sem
+  2. Python's DataMining jupyter notebook file with an explanation pdf on how problem statement is achieved (named from 6th sem "GitHUB_Knn_Explaination.pdf")
 
 
 ## <h3>Okay so, here's the breakdown of the above uploaded files: </h3>
+
+<br>
+- 1.0 We've used a dataset to create a DASHBOARD in Power BI
+<br>
+<br>
+<!-- <div style="display: flex;"> -->
+<img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/A1.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 150px;">
+</div>
+<br>
+- The file named 'VMam' is the power bi workbook & Telco-Customer-CHurn xls file is the dataset.
+<br>
+
+
 <br>
 - 1.1 The dataset used in "DATA_MINING_assignment.zip" is from here: https://data.police.uk/data/ (You can actually fine tune it according to your likings) but still I've added my semi-cleaned dataset, named "new_merged_crime_data.zip"
 <br>
