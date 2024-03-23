@@ -15,14 +15,14 @@ Well, This repo till date (23 March 2024) just has the
 ## <h3>Okay so, here's the breakdown of the above uploaded files: </h3>
 
 <br>
-- 1.0 We've used a dataset to create a DASHBOARD in Power BI
+<h4> 1.0 We've used a dataset to create a DASHBOARD in Power BI</h4>
 <br>
 <br>
 <!-- <div style="display: flex;"> -->
 <img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/A1.png?raw=true" alt="Image Description" >
 </div>
 <br>
-- The file named 'VMam' is the power bi workbook & Telco-Customer-CHurn xls file is the dataset.
+<h4>The file named 'VMam' is the power bi workbook & Telco-Customer-CHurn xls file is the dataset.</h4>
 <br>
 
 
@@ -102,4 +102,4 @@ Well, This repo till date (23 March 2024) just has the
 
 -------------------------------------------
 
-- ### "ANDROID FLUTTER CODE HAS ONLY 5 FLUTTER CODE & OTHERWISE WE'VE LEARNED JAVA ANDROID CODE"
+- ### "ANDROID FLUTTER CODE HAS ONLY 5 FLUTTER CODE & ALL OTHERS ARE JAVA ANDROID CODE AS A PART OF COLLEGE CURRICULUM"
