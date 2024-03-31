@@ -19,10 +19,13 @@ Well, This repo till date (23 March 2024) just has the
 <br>
 <br>
 <!-- <div style="display: flex;"> -->
-<img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/A1.png?raw=true" alt="Image Description" >
+<img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/A2.png" alt="Image Description" >
 </div>
 <br>
 <h4>The file named 'VMam' is the power bi workbook & Telco-Customer-CHurn xls file is the dataset.</h4>
+
+https://app.powerbi.com/links/CIED4-RPOH?ctid=6097692a-0a7b-4e97-be15-92710bdb2994&pbi_source=linkShare
+
 <br>
 
 
