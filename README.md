@@ -6,16 +6,50 @@ programming languages, frameworks, libraries & all those untouched fields in Tec
 
 Well, TBH, That's exactly what college made us do in past 6 semesters!!
 
-Well, This repo till date (23 March 2024) just has the 
-  1. Microsoft Power BI workbook from 8th sem
-  1. Rstudio's R-markdown file & explaination pdf which also contains the code (named "ToSubmit.pdf") from 6th sem
-  2. Python's DataMining jupyter notebook file with an explanation pdf on how problem statement is achieved (named from 6th sem "GitHUB_Knn_Explaination.pdf")
+Well, This repo till date (17 April 2024) just has the 
+  1. Green IT & Sustainability code from 8th sem
+  2. Microsoft Power BI workbook from 8th sem
+  3. Rstudio's R-markdown file & explaination pdf which also contains the code (named "ToSubmit.pdf") from 6th sem
+  4. Python's DataMining jupyter notebook file with an explanation pdf on how problem statement is achieved (named from 6th sem "GitHUB_Knn_Explaination.pdf")
+
 
 
 ## <h3>Okay so, here's the breakdown of the above uploaded files: </h3>
 
 <br>
-<h4> 1.0 We've used a dataset to create a DASHBOARD in Power BI</h4>
+<h4> 1.0 We've used a dataset to create a GREEN IT & SUSTAINABILITY outputs</h4>
+<br>
+<!-- <div style="display: flex;"> -->
+<img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/11.png" alt="Image Description" >
+</div>
+<br>
+<br>
+<img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/12.png" alt="Image Description" >
+<br>
+<br>
+<img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/13.png" alt="Image Description" >
+<br>
+<br>
+<img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/14.png" alt="Image Description" >
+<br>
+<br>
+<img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/15.png" alt="Image Description" >
+<br>
+<br>
+<img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/17.png" alt="Image Description" >
+<br>
+<br>
+<img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/16.png" alt="Image Description" >
+<br>
+
+
+
+
+
+## <h3>Okay so, here's the breakdown of the above uploaded files: </h3>
+
+<br>
+<h4> 1.1 We've used a dataset to create a DASHBOARD in Power BI</h4>
 <br>
 <h3>The below link takes you to the Dashboard tour ! </h3>
 https://app.powerbi.com/links/CIED4-RPOH?ctid=6097692a-0a7b-4e97-be15-92710bdb2994&pbi_source=linkShare
@@ -32,7 +66,7 @@ https://app.powerbi.com/links/CIED4-RPOH?ctid=6097692a-0a7b-4e97-be15-92710bdb29
 
 
 <br>
-- 1.1 The dataset used in "DATA_MINING_assignment.zip" is from here: https://data.police.uk/data/ (You can actually fine tune it according to your likings) but still I've added my semi-cleaned dataset, named "new_merged_crime_data.zip"
+- 1.2 The dataset used in "DATA_MINING_assignment.zip" is from here: https://data.police.uk/data/ (You can actually fine tune it according to your likings) but still I've added my semi-cleaned dataset, named "new_merged_crime_data.zip"
 <br>
 <br>
 <div style="display: flex;">
@@ -62,7 +96,7 @@ https://app.powerbi.com/links/CIED4-RPOH?ctid=6097692a-0a7b-4e97-be15-92710bdb29
 <br>
 <br>
 
-- 1.2 The dataset used in "Exploratory_Data_Analysis.zip" is 'Telco Customer Churn' from kaggle https://www.kaggle.com/blastchar/telco-customer-churn & a Bike Sharing dataset also from kaggle.
+- 1.3 The dataset used in "Exploratory_Data_Analysis.zip" is 'Telco Customer Churn' from kaggle https://www.kaggle.com/blastchar/telco-customer-churn & a Bike Sharing dataset also from kaggle.
 <br><br>
 <div style="display: flex;">
 <img src="https://github.com/Kgotta-contribute/CollegeProjects/blob/main/Images/S17.png?raw=true" alt="Image Description" width="300" height="300" style="margin-right: 150px;">
